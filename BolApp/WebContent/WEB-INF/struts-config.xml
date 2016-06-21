@@ -12,13 +12,31 @@
 
 	<global-forwards>
         <forward name="helloWorld" path="/helloWorld.do"/>
+        <forward name="testProperties" path="/testProperties.do"/>
     </global-forwards>
     
     <action-mappings>
         <action path="/helloWorld" type="it.teamstartup4fun.actions.HelloWorldAction" name="helloWorldForm">
         	<forward name="success" path="/helloWorld.jsp" />
-        </action>    
+        </action> 
+        
+        <action path="/testProperties" type="it.teamstartup4fun.actions.TestPropertiesAction" name="testPropertiesAction">
+        	<forward name="success" path="/testProperties.jsp" />
+        </action>
+        
+        <action
+			path="/ChangeLanguage"
+			type="it.teamstartup4fun.actions.LanguageSelectAction"
+			name="languageSelectAction"
+			parameter="method"
+			validate="false"
+			>
+			<forward name="success" path="/testProperties.jsp"/>
+		</action>
     </action-mappings>
+    
+    <!-- Configurazione file properties per internazionalizzazione -->		
+    <message-resources parameter="it.teamstartup4fun.resources.language" />
 
 </struts-config>
 
