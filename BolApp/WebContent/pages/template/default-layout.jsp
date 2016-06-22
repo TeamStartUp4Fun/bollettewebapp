@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
+<%@taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 
@@ -8,17 +9,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Test Layout di default</title>
 </head>
+
 <body>
-	<html:link page="/ChangeLanguage.do?method=italian">Italian</html:link>
-	<html:link page="/ChangeLanguage.do?method=english">English</html:link>
-	
-	<bean:message key="testProperties"/>
-	
-	<br>
-	
-	<a href="TestTiles.do?method=body" >Body</a><br>
-        <a href="TestTiles.do?method=body2" >Body 2</a>
+
+	<tiles:insert attribute="header" />
+
+	<tiles:insert attribute="body" />
+
+	<tiles:insert attribute="footer" />
+
 </body>
 </html>

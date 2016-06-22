@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+
+	<!-- Test layout -->
+   <definition name="test-tiles" path="/pages/template/default-layout.jsp">
+		<put name="header" value="/pages/view/test-tiles-header.jsp" />
+		<put name="body" value="/pages/view/body-default.jsp" />
+		<put name="footer" value="/pages/view/test-tiles-footer.jsp" />
+   </definition>
+   
+   <definition name="test-tiles-body" extends="test-tiles">
+   		<put name="body" value="/pages/view/test-tiles-body.jsp" />
+   </definition>
+   
+   <definition name="test-tiles-body2" extends="test-tiles">
+   		<put name="body" value="/pages/view/test-tiles-body2.jsp" />
+   </definition>
+	
+</tiles-definitions>

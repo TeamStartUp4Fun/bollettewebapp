@@ -20,6 +20,7 @@
         	<forward name="success" path="/helloWorld.jsp" />
         </action> 
         
+        <!-- Test File di Properties -->
         <action path="/testProperties" type="it.teamstartup4fun.actions.TestPropertiesAction" name="testPropertiesAction">
         	<forward name="success" path="/testProperties.jsp" />
         </action>
@@ -33,10 +34,26 @@
 			>
 			<forward name="success" path="/testProperties.jsp"/>
 		</action>
+		<!-- Fine test file properties -->
+		
+		<!-- Test Tiles -->
+		<action path="/TestTiles" type="it.teamstartup4fun.actions.TestTilesAction" name="testTilesAction" parameter="method">
+        	<forward name="body" path="test-tiles-body" />
+        	<forward name="body2" path="test-tiles-body2" />
+        </action>
+        <!-- Fine test tiles -->
+		
     </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
     
     <!-- Configurazione file properties per internazionalizzazione -->		
     <message-resources parameter="it.teamstartup4fun.resources.language" />
+    
+    <!-- Def Tiles -->    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+			<set-property property="moduleAware" value="true" />
+	</plug-in>
 
 </struts-config>
-
