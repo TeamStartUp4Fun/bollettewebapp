@@ -29,6 +29,7 @@
 	            <span class="icon-bar"></span>
 	          </button>
 	          <a class="navbar-brand" href="#">Bollette App</a>
+	          <a class="navbar-brand" href="testProperties.do" >Test</a><br>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <form class="navbar-form navbar-right">

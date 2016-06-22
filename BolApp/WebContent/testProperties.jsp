@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
@@ -11,14 +11,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<p>Cambio della lingua</p>
 	<html:link page="/ChangeLanguage.do?method=italian">Italian</html:link>
 	<html:link page="/ChangeLanguage.do?method=english">English</html:link>
-	
-	<bean:message key="testProperties"/>
-	
+	<br> Messaggio test:
+	<bean:message key="testProperties" />
+
 	<br>
-	
-	<a href="TestTiles.do?method=body" >Body</a><br>
-        <a href="TestTiles.do?method=body2" >Body 2</a>
+	<br>
+
+	<p>Test Layout</p>
+	<a href="TestTiles.do?method=body">Body</a>
+	<br>
+	<a href="TestTiles.do?method=body2">Body 2</a>
 </body>
 </html>
